@@ -2,7 +2,7 @@
 name: heartbeat-guard
 version: 1.0.0
 description: Prevents HEARTBEAT.md from exceeding the bootstrap character budget
-author: Celeste
+author: staybased
 ---
 
 # Heartbeat Guard
@@ -22,10 +22,10 @@ HEARTBEAT.md answers ONE question: **"What do I do when I get a heartbeat poll?"
 ✅ Include:
 - Ordered sequence of steps (health check, task pick, log)
 - Hard rules (safety rails, budget limits, escalation triggers)
-- File paths you need to read (GET-TO-DO.md, memory files)
+- File paths you need to read (task lists, memory files)
 
 ❌ Does NOT belong (put these elsewhere):
-- Detailed priority ladders → GET-TO-DO.md or AGENTS.md
+- Detailed priority ladders → task list or AGENTS.md
 - Motivational text → SOUL.md
 - Tool commands/references → TOOLS.md
 - Explanations of why steps exist → AGENTS.md
@@ -46,25 +46,25 @@ HEARTBEAT.md answers ONE question: **"What do I do when I get a heartbeat poll?"
 
 ## Sequence:
 ### 1. Health
-- `tail -1 /tmp/watchdog.log` — if >1h stale, run `bash scripts/watchdog.sh`
+- Check watchdog/health scripts — run if stale
 
 ### 2. Review (every ~4h)
-- Check `memory/self-review.md` timestamp → run if stale
-- Check Apple Notes (`memo notes`)
+- Check memory files for staleness → refresh if needed
+- Check inbox or notes for new input from your human
 
 ### 3. One Task
-- Read `GET-TO-DO.md` → first ACTIVE unchecked item
-- All done/blocked → promote QUEUED. Empty → pick useful work.
+- Read your task list → first active unchecked item
+- All done/blocked → promote next queued item. Empty → pick useful work.
 - One chunk, max ~5 min. Spawn max 1 sub-agent.
-- Needs Cory → mark blocked, pick next
+- Needs human input → mark blocked, pick next
 
 ### 4. Log
-- Update checkboxes, git commit, post `#reef-logs` if shipped
+- Update task list, git commit, post to logs channel if shipped
 
 ## Rules
-- No public posts or spending without Cory
-- Stuck 3 heartbeats → flag `#celeste-workspace`, move on
-- Short responses. 24/7. Local LLMs for simple tasks.
+- No public posts or spending without human approval
+- Stuck 3 heartbeats on same task → flag and move on
+- Short responses. Use local LLMs for simple tasks.
 ```
 
 ## Backup Protocol

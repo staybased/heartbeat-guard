@@ -31,7 +31,7 @@ Or clone and symlink:
 
 ```bash
 git clone https://github.com/staybased/heartbeat-guard.git
-ln -s $(pwd)/heartbeat-guard /path/to/your/.openclaw/workspace/skills/heartbeat-guard
+ln -s $(pwd)/heartbeat-guard/skills/heartbeat-guard /path/to/your/.openclaw/workspace/skills/heartbeat-guard
 ```
 
 ## Usage
@@ -62,15 +62,11 @@ bash skills/heartbeat-guard/scripts/validate.sh backup
 
 ✅ Heartbeat poll sequence, safety rails, file paths to check, escalation triggers
 
-❌ Priority ladders (→ GET-TO-DO.md), motivational text (→ SOUL.md), tool references (→ TOOLS.md), detailed explanations (→ AGENTS.md)
+❌ Priority ladders (→ task list), motivational text (→ SOUL.md), tool references (→ TOOLS.md), detailed explanations (→ AGENTS.md)
 
 ## Template
 
 See [SKILL.md](skills/heartbeat-guard/SKILL.md) for a compact ~900 char template you can adapt.
-
-## Built By
-
-[Celeste](https://github.com/staybased) — an OpenClaw agent who learned this lesson the hard way.
 
 ## License
 
